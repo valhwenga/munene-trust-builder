@@ -11,6 +11,7 @@ const teamMembers = [
     image: teamReginah,
     bio: "The founder and managing director Reginah Thomo is a household name in the property and vehicle insurance space. She has worked for almost all the big players in the industry including the likes of Santam, Mutual and Federal, Alexander Forbes, Indwe Risk Services, Aon SA and Lion of Africa. She started as an underwriting clerk at Santam which gave her the needed introduction to the industry. She then progressed well and ended as an executive level with Lion of Africa. Reginah is experienced in all the classes of insurance ranging from personal lines, commercial, corporate, niche and public-sector lines.",
     featured: true,
+<<<<<<< HEAD
     companies: ["Santam", "Mutual & Federal", "Alexander Forbes", "Indwe Risk Services", "Aon SA", "Lion of Africa"],
     email: "reginah@munenerisk.co.za",
     linkedin: "#"
@@ -46,6 +47,9 @@ const teamMembers = [
     email: "michael@munenerisk.co.za",
     linkedin: "#"
   }
+=======
+  },
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
 ];
 
 export default function TeamPage() {
@@ -75,7 +79,11 @@ export default function TeamPage() {
                 {/* Image */}
                 <div className="lg:col-span-2">
                   <div className="relative">
+<<<<<<< HEAD
                     <div className="aspect-[3/4] max-w-sm mx-auto lg:max-w-none rounded-xl overflow-hidden shadow-lg">
+=======
+                    <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                       <img
                         src={member.image}
                         alt={member.name}
@@ -83,7 +91,11 @@ export default function TeamPage() {
                       />
                     </div>
                     {/* Decorative Element */}
+<<<<<<< HEAD
                     <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-secondary rounded-xl -z-10" />
+=======
+                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary rounded-2xl -z-10" />
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                   </div>
                 </div>
 
@@ -109,7 +121,11 @@ export default function TeamPage() {
                   <div className="bg-muted rounded-xl p-6 mb-8">
                     <h4 className="font-semibold text-primary mb-4">Industry Experience</h4>
                     <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                       {member.companies?.map((company, idx) => (
+=======
+                      {["Santam", "Mutual & Federal", "Alexander Forbes", "Indwe Risk Services", "Aon SA", "Lion of Africa"].map((company, idx) => (
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                         <span key={idx} className="px-3 py-1 bg-background rounded-full text-sm text-muted-foreground">
                           {company}
                         </span>
@@ -120,13 +136,21 @@ export default function TeamPage() {
                   {/* Contact Links */}
                   <div className="flex gap-4">
                     <a 
+<<<<<<< HEAD
                       href={`mailto:${member.email}`}
+=======
+                      href="mailto:admin@munenerisk.co.za"
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                       className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-navy-light transition-colors"
                     >
                       <Mail className="h-4 w-4 text-white" />
                     </a>
                     <a 
+<<<<<<< HEAD
                       href={member.linkedin}
+=======
+                      href="#"
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                       className="w-10 h-10 rounded-full bg-primary flex items-center justify-center hover:bg-navy-light transition-colors"
                     >
                       <Linkedin className="h-4 w-4 text-white" />
@@ -139,6 +163,7 @@ export default function TeamPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Other Team Members */}
       {teamMembers.filter(m => !m.featured).length > 0 && (
         <section className="section-padding bg-muted">
@@ -218,6 +243,8 @@ export default function TeamPage() {
         </section>
       )}
 
+=======
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
       {/* Company Values */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
@@ -228,6 +255,7 @@ export default function TeamPage() {
             <div className="w-20 h-1 bg-secondary mx-auto" />
           </div>
 
+<<<<<<< HEAD
           <div className="team-values-scroll py-8">
             <div className="team-values-track">
               {/* First set of values */}
@@ -342,6 +370,32 @@ export default function TeamPage() {
                 </div>
               ))}
             </div>
+=======
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                title: "Expertise",
+                description: "Decades of combined experience across all classes of insurance, from personal lines to complex corporate programmes.",
+              },
+              {
+                title: "Integrity",
+                description: "We operate with complete transparency and always put our clients' interests first in every recommendation we make.",
+              },
+              {
+                title: "Dedication",
+                description: "We invest time to understand your unique situation and deliver solutions that truly protect what matters to you.",
+              },
+            ].map((value, index) => (
+              <div key={index} className="text-center p-6">
+                <h3 className="text-xl font-display font-semibold text-primary mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
           </div>
         </div>
       </section>

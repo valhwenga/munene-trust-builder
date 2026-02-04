@@ -71,7 +71,11 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+<<<<<<< HEAD
         display: ['Source Sans Pro', 'Inter', 'system-ui', 'sans-serif'],
+=======
+        display: ['Playfair Display', 'Georgia', 'serif'],
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -10,28 +10,40 @@ const services = [
     title: "Personal Insurance",
     description: "Comprehensive coverage for your household, motor vehicles, and personal possessions.",
     href: "/services#personal",
+<<<<<<< HEAD
     backgroundImage: "https://images.unsplash.com/photo-1560974053-9b1b2640d511?w=800&h=600&fit=crop&auto=format"
+=======
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
   },
   {
     icon: Building2,
     title: "Commercial Insurance",
     description: "Protect your small to medium business assets, property, and motor fleets.",
     href: "/services#commercial",
+<<<<<<< HEAD
     backgroundImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop&auto=format"
+=======
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
   },
   {
     icon: Landmark,
     title: "Corporate Insurance",
     description: "Tailored solutions for blue-chip companies with assets locally and abroad.",
     href: "/services#corporate",
+<<<<<<< HEAD
     backgroundImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop&auto=format"
+=======
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
   },
   {
     icon: Shield,
     title: "Public Sector Insurance",
     description: "Specialized coverage for state-owned entities and municipalities.",
     href: "/services#public",
+<<<<<<< HEAD
     backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&auto=format"
+=======
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
   },
 ];
 
@@ -81,6 +93,7 @@ export default function HomePage() {
         </div>
 
         {/* Content */}
+<<<<<<< HEAD
         <div className="relative container-custom pt-20 sm:pt-24 lg:pt-32 pb-20">
           <div className="w-full max-w-none">
             {/* Trust Badge */}
@@ -96,10 +109,26 @@ export default function HomePage() {
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-4 sm:mb-6 lg:mb-8 leading-relaxed fade-in-up fade-in-up-delay-2 max-w-full">
+=======
+        <div className="relative container-custom pt-32 pb-20">
+          <div className="max-w-3xl">
+            {/* Trust Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm mb-8 fade-in-up">
+              <Shield className="h-4 w-4 text-secondary" />
+              <span>FSCA Licensed Insurance Broker</span>
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 fade-in-up fade-in-up-delay-1">
+              Specialist Short-Term Insurance & Risk Management Solutions
+            </h1>
+            
+            <p className="text-xl text-white/90 mb-8 leading-relaxed fade-in-up fade-in-up-delay-2">
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
               Independent insurance brokerage delivering client-focused advice with unwavering 
               commitment to professionalism, ethics, and FSCA compliance.
             </p>
 
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 fade-in-up fade-in-up-delay-3">
               <Link to="/contact">
                 <Button className="btn-gold text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 border-0 w-full sm:w-auto">
@@ -109,6 +138,17 @@ export default function HomePage() {
               </Link>
               <Link to="/contact">
                 <Button variant="outline" className="btn-outline text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-6 w-full sm:w-auto">
+=======
+            <div className="flex flex-wrap gap-4 fade-in-up fade-in-up-delay-3">
+              <Link to="/contact">
+                <Button className="btn-gold text-lg px-8 py-6 border-0">
+                  Get a Quote
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" className="btn-outline text-lg px-8 py-6">
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                   Contact Us
                 </Button>
               </Link>
@@ -141,22 +181,36 @@ export default function HomePage() {
       {/* Services Section */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
+<<<<<<< HEAD
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-primary mb-3 lg:mb-4">
               Our Product Offering
             </h2>
             <div className="w-16 lg:w-20 h-1 bg-secondary mx-auto mb-4 lg:mb-6" />
             <p className="text-base lg:text-lg text-muted-foreground max-w-full lg:max-w-2xl mx-auto">
+=======
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
+              Our Product Offering
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto mb-6" />
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
               Comprehensive short-term insurance solutions tailored to protect what matters most 
               to individuals, businesses, and public institutions.
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+=======
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
             {services.map((service, index) => (
               <Link 
                 key={index} 
                 to={service.href}
+<<<<<<< HEAD
                 className="service-card-bg group"
                 style={{
                   '--bg-image': `url(${service.backgroundImage})`
@@ -169,6 +223,17 @@ export default function HomePage() {
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-3 lg:mb-4">
+=======
+                className="service-card group"
+              >
+                <div className="w-14 h-14 rounded-lg bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary transition-colors">
+                  <service.icon className="h-7 w-7 text-secondary group-hover:text-primary transition-colors" />
+                </div>
+                <h3 className="text-xl font-display font-semibold text-primary mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                   {service.description}
                 </p>
                 <span className="inline-flex items-center text-secondary font-medium text-sm group-hover:gap-2 transition-all">

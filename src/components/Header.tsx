@@ -1,16 +1,24 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+<<<<<<< HEAD
 import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+=======
+import { Menu, X, Phone, Mail } from "lucide-react";
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+<<<<<<< HEAD
   { name: "The Munene Way", href: "#", dropdown: [
     { name: "Our Product Offering", href: "/services" },
     { name: "Specialized Insurance", href: "/specialist-insurance" }
   ]},
+=======
+  { name: "Services", href: "/services" },
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
   { name: "CSI", href: "/csi" },
   { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
@@ -19,7 +27,10 @@ const navigation = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+<<<<<<< HEAD
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+=======
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
   const location = useLocation();
   const isHome = location.pathname === "/";
 
@@ -46,6 +57,7 @@ export function Header() {
   return (
     <>
       {/* Top Bar */}
+<<<<<<< HEAD
       <div className="bg-primary text-primary-foreground py-2 relative z-50">
         <div className="container-custom flex justify-between items-center text-sm">
           <div className="flex items-center gap-4 lg:gap-6">
@@ -62,6 +74,22 @@ export function Header() {
           </div>
           <div className="flex items-center gap-4">
             <span className="text-primary-foreground/80 text-xs sm:text-sm">FSCA Licensed Insurance Broker</span>
+=======
+      <div className="hidden lg:block bg-primary text-primary-foreground py-2">
+        <div className="container-custom flex justify-between items-center text-sm">
+          <div className="flex items-center gap-6">
+            <a href="tel:+27123456789" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <Phone className="h-4 w-4" />
+              <span>+27 12 345 6789</span>
+            </a>
+            <a href="mailto:admin@munenerisk.co.za" className="flex items-center gap-2 hover:text-secondary transition-colors">
+              <Mail className="h-4 w-4" />
+              <span>admin@munenerisk.co.za</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-primary-foreground/80">FSCA Licensed Insurance Broker</span>
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
           </div>
         </div>
       </div>
@@ -69,6 +97,7 @@ export function Header() {
       {/* Main Header */}
       <header className={cn("header-sticky transition-all duration-300", headerBg)}>
         <div className="container-custom">
+<<<<<<< HEAD
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 lg:gap-3">
@@ -76,12 +105,22 @@ export function Header() {
               <div className={cn("hidden sm:block", textColor)}>
                 <div className="font-display font-bold text-base lg:text-lg leading-tight">MUNENE</div>
                 <div className="text-xs lg:text-xs tracking-wider opacity-80">RISK SERVICES</div>
+=======
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-3">
+              <MuneneLogo className="h-12 w-auto" />
+              <div className={cn("hidden sm:block", textColor)}>
+                <div className="font-display font-bold text-lg leading-tight">MUNENE</div>
+                <div className="text-xs tracking-wider opacity-80">RISK SERVICES</div>
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
               </div>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
               {navigation.map((item) => (
+<<<<<<< HEAD
                 <div key={item.name} className="relative">
                   {item.dropdown ? (
                     <>
@@ -135,6 +174,20 @@ export function Header() {
                     </Link>
                   )}
                 </div>
+=======
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-secondary relative group",
+                    textColor,
+                    location.pathname === item.href && "text-secondary"
+                  )}
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                </Link>
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
               ))}
             </nav>
 
@@ -149,7 +202,11 @@ export function Header() {
                   "border-2 transition-all duration-300",
                   isScrolled || !isHome
                     ? "border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+<<<<<<< HEAD
                     : "border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-primary"
+=======
+                    : "border-white text-white hover:bg-white hover:text-primary"
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
                 )}>
                   Client Portal
                 </Button>
@@ -176,6 +233,7 @@ export function Header() {
           <div className="lg:hidden bg-white border-t animate-slide-in-right">
             <div className="container-custom py-4 space-y-4">
               {navigation.map((item) => (
+<<<<<<< HEAD
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div className="space-y-2">
@@ -212,6 +270,18 @@ export function Header() {
                     </Link>
                   )}
                 </div>
+=======
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={cn(
+                    "block py-2 text-primary font-medium hover:text-secondary transition-colors",
+                    location.pathname === item.href && "text-secondary"
+                  )}
+                >
+                  {item.name}
+                </Link>
+>>>>>>> a23eb9027c10d299975eef7194819d3937154fbe
               ))}
               <div className="pt-4 space-y-3 border-t">
                 <a
